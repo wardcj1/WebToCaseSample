@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Financing Application</title>
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid text-center col-xs-12 col-md-12">
+                <img src="images/logo.jpg" alt="SaveCal" class=" col-xs-12 col-md-4" id="logo">
+                <h1 class="col-xs-12 col-md-8">Financing Application</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Form inputs -->
+    <div class="container">
+        <div class="text-center col-md-2"></div>
+        <div class="col-md-8">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+                <input type=hidden name="orgid" value="00D41000001hnot">
+                <input type=hidden name="retURL" value="http://savecal.com">
+                <!--  ----------------------------------------------------------------------  -->
+                <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                <!--  these lines if you wish to test in debug mode.                          -->
+                <!--  <input type="hidden" name="debug" value=1>                              -->
+                <!--  <input type="hidden" name="debugEmail"                                  -->
+                <!--  value="ward.christopherj@gmail.com">                                    -->
+                <!--  ----------------------------------------------------------------------  -->
+                <label for="name">Contact Name</label>
+                <input id="name" maxlength="80" name="name" size="20" type="text" />
+                <br>
+                <label for="email">Email</label>
+                <input id="email" maxlength="80" name="email" size="20" type="text" />
+                <br>
+                <label for="phone">Phone</label>
+                <input id="phone" maxlength="40" name="phone" size="20" type="text" />
+                <br> SSN#:
+                <input id="00N4100000dvMYb" maxlength="9" name="00N4100000dvMYb" size="20" type="text" />
+                <br> Photo ID Type:
+                <select id="00N4100000dvMYg" name="00N4100000dvMYg" title="Photo ID Type">
+                    <option value="">--None--</option>
+                    <option value="Drivers License">Drivers License</option>
+                    <option value="State Issued">State Issued</option>
+                    <option value="US Passport">US Passport</option>
+                    <option value="US Military">US Military</option>
+                </select>
+                <br> ID Issue Date:<span class="dateInput dateOnlyInput"><input  id="00N4100000dvMYl" name="00N4100000dvMYl" size="12" type="text" /></span>
+                <br> ID Expire Date:<span class="dateInput dateOnlyInput"><input  id="00N4100000dvMYq" name="00N4100000dvMYq" size="12" type="text" /></span>
+                <br> Date of Birth:<span class="dateInput dateOnlyInput"><input  id="00N4100000dvMYv" name="00N4100000dvMYv" size="12" type="text" /></span>
+                <br> Employer Phone:
+                <input id="00N4100000dvMZ0" maxlength="40" name="00N4100000dvMZ0" onkeydown="formatPhoneOnEnter(this, event);" size="20" type="text" />
+                <br>
+                <img src="images/signhere.jpg" alt="Sign Here" class=" col-xs-12 col-md-4" id="signhere"><input type="submit" name="submit">
+            </form>
+        </div>
+        <div class="text-center col-md-2"></div>
+    </div>
+    <!-- Disclaimer -->
+    <div class="container">
+        <div class="row">
+            <div class="text-center col-md-6">
+                <h2>The Limited Time 0% & 3.99% APR Plans Only Qualify With The Sign Today, Start Tomorrow Promotion for Approved Applicants</h2>
+            </div>
+            <div class="text-center col-md-6">
+                <div class="row">
+                    <div class="text-center col-md-12">
+                        <h3>Disclaimer</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center col-md-12">
+                        <h5>*Potential energy savings may vary depending on your personal life style, system settings, equipment maintenance, local climate, actual construction and installation. Not all home owners will qualify for the SaveCal Affordability Program. SaveCal uses third party financing.</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="text-center col-md-12">
+                        <h5>**Net impact is the total amount after the average energy savings have been deducted from the total financed amount, including incurred interest.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Signature -->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="text-center col-xs-12 col-md-12">
+                
+                <h6 class="col-xs-12 col-md-8">First and Last Name</h6>
+            </div>
+        </div>
+    </div> -->
+    <!-- Submit Button -->
+    <script src="app.js"></script>
+</body>
+
+</html>
